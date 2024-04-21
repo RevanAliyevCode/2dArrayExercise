@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using static System.Console;
 
-FindPrimitive();
+FindPowArray();
 void Print2dArr()
 {
     int[,] arr =
@@ -168,10 +168,6 @@ void AssignZeroColumn()
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         arr[i, 2] = 0;
-    }
-
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
             Write($"{arr[i, j]} ");
@@ -300,22 +296,17 @@ void FindSumArray()
 
     int[,] arr3 = new int[arr1.GetLength(0), arr1.GetLength(1)];
 
-    for (int i = 0; i < arr1.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr1.GetLength(1); j++)
-        {
-            arr3[i, j] = arr1[i, j] + arr2[i, j];
-        }
-    }
-
     for (int i = 0; i < arr3.GetLength(0); i++)
     {
         for (int j = 0; j < arr3.GetLength(1); j++)
         {
+            arr3[i, j] = arr1[i, j] + arr2[i, j];
             Write($"{arr3[i, j]} ");
         }
         WriteLine();
     }
+
+
 }
 
 void SumRows()
@@ -383,18 +374,11 @@ void FindPowArray()
 
     int[,] arr3 = new int[arr1.GetLength(0), arr1.GetLength(1)];
 
-    for (int i = 0; i < arr1.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr1.GetLength(1); j++)
-        {
-            arr3[i, j] = arr1[i, j] * arr2[i, j];
-        }
-    }
-
     for (int i = 0; i < arr3.GetLength(0); i++)
     {
         for (int j = 0; j < arr3.GetLength(1); j++)
         {
+            arr3[i, j] = arr1[i, j] * arr2[i, j];
             Write($"{arr3[i, j]} ");
         }
         WriteLine();
